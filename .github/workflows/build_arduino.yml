@@ -6,14 +6,12 @@ on:
     paths:
       - ".github/workflows/build_arduino.yml"
       - "examples/**"
-      - "!examples/old_backups/**"
       - "RF24.*"
   push:
     branches: [master]
     paths:
       - ".github/workflows/build_arduino.yml"
       - "examples/**"
-      - "!examples/old_backups/**"
 
 permissions: {}
 
@@ -26,24 +24,14 @@ jobs:
     uses: nRF24/.github/.github/workflows/build_arduino.yaml@main
     with:
       sketch-paths: |
-        - examples/GettingStarted
-        - examples/AcknowledgementPayloads
-        - examples/ManualAcknowledgements
-        - examples/StreamingData
-        - examples/MulticeiverDemo
-        - examples/InterruptConfigure
-        - examples/scanner
-        - examples/encodeRadioDetails
-      # The following examples still exist for posterity. They don't trigger this workflow
-      #   - examples/old_backups/GettingStarted_HandlingFailures
-      #   - examples/old_backups/pingpair_dyn
-      #   - examples/old_backups/pingpair_irq
-      #   - examples/old_backups/pingpair_multi_dyn
-      #   - examples/old_backups/pingpair_sleepy
-      #   - examples/old_backups/TransferTimeouts
-      #   - examples/old_backups/recipes/led_remote
-      #   - examples/old_backups/recipes/nordic_fob
-      #   - examples/old_backups/recipes/pingpair_maple
+        - examples/arduino/GettingStarted
+        - examples/arduino/AcknowledgementPayloads
+        - examples/arduino/ManualAcknowledgements
+        - examples/arduino/StreamingData
+        - examples/arduino/MulticeiverDemo
+        - examples/arduino/InterruptConfigure
+        - examples/arduino/scanner
+        - examples/arduino/encodeRadioDetails
       fqbn: ${{ matrix.fqbn }}
       enable-deltas-report: ${{ matrix.enable-deltas-report }}
       # install earlphilhower's arduino-pico platform index
@@ -124,8 +112,8 @@ jobs:
   #         name: "ATTinyCore:avr"
   #       - name: "arduino:avr"
   #     sketch-paths: |
-  #       - examples/rf24_ATTiny/rf24ping85
-  #       - examples/rf24_ATTiny/timingSearch3pin
+  #       - examples/arduino/rf24_ATTiny/rf24ping85
+  #       - examples/arduino/rf24_ATTiny/timingSearch3pin
   #     fqbn: ${{ matrix.fqbn }}
   #     enable-deltas-report: ${{ matrix.enable-deltas-report }}
   #   strategy:

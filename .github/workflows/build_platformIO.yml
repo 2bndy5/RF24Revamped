@@ -7,8 +7,7 @@ on:
       - ".github/workflows/build_platformIO.yml"
       - "library.json"
       - "examples/**"
-      - "!examples/old_backups/**"
-      - "!examples/rf24_ATTiny/**"
+      - "!examples/arduino/**"
   push:
     branches: [master]
     paths:
@@ -40,13 +39,13 @@ jobs:
       fail-fast: false
       matrix:
         example:
-          - "examples/GettingStarted/GettingStarted.ino"
-          - "examples/AcknowledgementPayloads/AcknowledgementPayloads.ino"
-          - "examples/ManualAcknowledgements/ManualAcknowledgements.ino"
-          - "examples/StreamingData/StreamingData.ino"
-          - "examples/MulticeiverDemo/MulticeiverDemo.ino"
-          - "examples/InterruptConfigure/InterruptConfigure.ino"
-          - "examples/encodeRadioDetails/encodeRadioDetails.ino"
+          - "examples/arduino/GettingStarted/GettingStarted.ino"
+          - "examples/arduino/AcknowledgementPayloads/AcknowledgementPayloads.ino"
+          - "examples/arduino/ManualAcknowledgements/ManualAcknowledgements.ino"
+          - "examples/arduino/StreamingData/StreamingData.ino"
+          - "examples/arduino/MulticeiverDemo/MulticeiverDemo.ino"
+          - "examples/arduino/InterruptConfigure/InterruptConfigure.ino"
+          - "examples/arduino/encodeRadioDetails/encodeRadioDetails.ino"
         board:
           - "teensy31"
           - "teensy35"
