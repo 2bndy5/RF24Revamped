@@ -70,7 +70,7 @@ typedef enum
 
 /**
  * @}
- * @defgroup Datarate datarate
+ * @defgroup Datarate Data Rate
  * How fast data moves through the air. Units are in bits per second (bps).
  * @see
  * - RF24::setDataRate()
@@ -2062,7 +2062,7 @@ private:
 };
 
 /**
- * @example{lineno} examples/GettingStarted/GettingStarted.ino
+ * @example{lineno} examples/arduino/GettingStarted/GettingStarted.ino
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * A simple example of sending data from 1 nRF24L01 transceiver to another.
@@ -2072,7 +2072,7 @@ private:
  */
 
 /**
- * @example{lineno} examples/AcknowledgementPayloads/AcknowledgementPayloads.ino
+ * @example{lineno} examples/arduino/AcknowledgementPayloads/AcknowledgementPayloads.ino
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * A simple example of sending data from 1 nRF24L01 transceiver to another
@@ -2083,7 +2083,7 @@ private:
  */
 
 /**
- * @example{lineno} examples/ManualAcknowledgements/ManualAcknowledgements.ino
+ * @example{lineno} examples/arduino/ManualAcknowledgements/ManualAcknowledgements.ino
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * A simple example of sending data from 1 nRF24L01 transceiver to another
@@ -2099,7 +2099,7 @@ private:
  */
 
 /**
- * @example{lineno} examples/StreamingData/StreamingData.ino
+ * @example{lineno} examples/arduino/StreamingData/StreamingData.ino
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * A simple example of streaming data from 1 nRF24L01 transceiver to another.
@@ -2109,7 +2109,7 @@ private:
  */
 
 /**
- * @example{lineno} examples/MulticeiverDemo/MulticeiverDemo.ino
+ * @example{lineno} examples/arduino/MulticeiverDemo/MulticeiverDemo.ino
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * A simple example of sending data from as many as 6 nRF24L01 transceivers to
@@ -2122,7 +2122,7 @@ private:
  */
 
 /**
- * @example{lineno} examples/InterruptConfigure/InterruptConfigure.ino
+ * @example{lineno} examples/arduino/InterruptConfigure/InterruptConfigure.ino
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * This example uses Acknowledgement (ACK) payloads attached to ACK packets to
@@ -2135,49 +2135,7 @@ private:
  */
 
 /**
- * @example{lineno} examples/old_backups/GettingStarted_HandlingFailures/GettingStarted_HandlingFailures.ino
- * Written by [TMRh20](http://github.com/TMRh20) in 2019
- *
- * This example demonstrates the basic getting started functionality, but with
- * failure handling for the radio chip. Addresses random radio failures etc,
- * potentially due to loose wiring on breadboards etc.
- */
-
-/**
- * @example{lineno} examples/old_backups/TransferTimeouts/TransferTimeouts.ino
- * Written by [TMRh20](https://github.com/TMRh20)
- *
- * This example demonstrates the use of and extended timeout period and
- * auto-retries/auto-reUse to increase reliability in noisy or low signal scenarios.
- *
- * Write this sketch to two different nodes.  Put one of the nodes into 'transmit'
- * mode by connecting with the serial monitor and sending a 'T'.  The data <br>
- * transfer will begin, with the receiver displaying the payload count and the
- * data transfer rate.
- */
-
-/**
- * @example{lineno} examples/old_backups/pingpair_irq/pingpair_irq.ino
- * Updated by [TMRh20](https://github.com/TMRh20)
- *
- * This is an example of how to user interrupts to interact with the radio, and a demonstration
- * of how to use them to sleep when receiving, and not miss any payloads.<br>
- * The pingpair_sleepy example expands on sleep functionality with a timed sleep option for the transmitter.
- * Sleep functionality is built directly into my fork of the RF24Network library<br>
- */
-
-/**
- * @example{lineno} examples/old_backups/pingpair_sleepy/pingpair_sleepy.ino
- * Updated by [TMRh20](https://github.com/TMRh20)
- *
- * This is an example of how to use the RF24 class to create a battery-
- * efficient system.  It is just like the GettingStarted_CallResponse example, but the<br>
- * ping node powers down the radio and sleeps the MCU after every
- * ping/pong cycle, and the receiver sleeps between payloads. <br>
- */
-
-/**
- * @example{lineno} examples/rf24_ATTiny/rf24ping85/rf24ping85.ino
+ * @example{lineno} examples/arduino/rf24_ATTiny/rf24ping85/rf24ping85.ino
  * <b>2014 Contribution by [tong67](https://github.com/tong67)</b><br>
  * Updated 2020 by [2bndy5](http://github.com/2bndy5) for the
  * [SpenceKonde ATTinyCore](https://github.com/SpenceKonde/ATTinyCore)<br>
@@ -2201,7 +2159,7 @@ private:
  */
 
 /**
- * @example{lineno} examples/rf24_ATTiny/timingSearch3pin/timingSearch3pin.ino
+ * @example{lineno} examples/arduino/rf24_ATTiny/timingSearch3pin/timingSearch3pin.ino
  * <b>2014 Contribution by [tong67](https://github.com/tong67)</b><br>
  * Updated 2020 by [2bndy5](http://github.com/2bndy5) for the
  * [SpenceKonde ATTinyCore](https://github.com/SpenceKonde/ATTinyCore)<br>
@@ -2220,19 +2178,13 @@ private:
  */
 
 /**
- * @example{lineno} examples/old_backups/pingpair_dyn/pingpair_dyn.ino
- *
- * This is an example of how to use payloads of a varying (dynamic) size on Arduino.
- */
-
-/**
- * @example{lineno} examples_linux/getting_started.py
+ * @example{lineno} examples/linux/getting_started.py
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * This is a simple example of using the RF24 class on a Raspberry Pi.
  *
  * Remember to install the [Python wrapper](python_wrapper.md), then
- * navigate to the "RF24/examples_linux" folder.
+ * navigate to the "RF24/examples/linux" folder.
  * <br>To run this example, enter
  * @code{.sh}python3 getting_started.py @endcode and follow the prompts.
  *
@@ -2241,14 +2193,14 @@ private:
  */
 
 /**
- * @example{lineno} examples_linux/acknowledgement_payloads.py
+ * @example{lineno} examples/linux/acknowledgement_payloads.py
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * This is a simple example of using the RF24 class on a Raspberry Pi to
  * transmit and retrieve custom automatic acknowledgment payloads.
  *
  * Remember to install the [Python wrapper](python_wrapper.md), then
- * navigate to the "RF24/examples_linux" folder.
+ * navigate to the "RF24/examples/linux" folder.
  * <br>To run this example, enter
  * @code{.sh}python3 acknowledgement_payloads.py @endcode and follow the prompts.
  *
@@ -2257,7 +2209,7 @@ private:
  */
 
 /**
- * @example{lineno} examples_linux/manual_acknowledgements.py
+ * @example{lineno} examples/linux/manual_acknowledgements.py
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * This is a simple example of using the RF24 class on a Raspberry Pi to
@@ -2267,7 +2219,7 @@ private:
  * transmission. Instead, this example uses a call and response paradigm.
  *
  * Remember to install the [Python wrapper](python_wrapper.md), then
- * navigate to the "RF24/examples_linux" folder.
+ * navigate to the "RF24/examples/linux" folder.
  * <br>To run this example, enter
  * @code{.sh}python3 manual_acknowledgements.py @endcode and follow the prompts.
  *
@@ -2276,14 +2228,14 @@ private:
  */
 
 /**
- * @example{lineno} examples_linux/streaming_data.py
+ * @example{lineno} examples/linux/streaming_data.py
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * This is a simple example of using the RF24 class on a Raspberry Pi for
  * streaming multiple payloads.
  *
  * Remember to install the [Python wrapper](python_wrapper.md), then
- * navigate to the "RF24/examples_linux" folder.
+ * navigate to the "RF24/examples/linux" folder.
  * <br>To run this example, enter
  * @code{.sh}python3 streaming_data.py @endcode and follow the prompts.
  *
@@ -2292,14 +2244,14 @@ private:
  */
 
 /**
- * @example{lineno} examples_linux/interrupt_configure.py
+ * @example{lineno} examples/linux/interrupt_configure.py
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * This is a simple example of using the RF24 class on a Raspberry Pi to
  * detecting (and verifying) the IRQ (interrupt) pin on the nRF24L01.
  *
  * Remember to install the [Python wrapper](python_wrapper.md), then
- * navigate to the "RF24/examples_linux" folder.
+ * navigate to the "RF24/examples/linux" folder.
  * <br>To run this example, enter
  * @code{.sh}python3 interrupt_configure.py @endcode and follow the prompts.
  *
@@ -2308,7 +2260,7 @@ private:
  */
 
 /**
- * @example{lineno} examples_linux/multiceiver_demo.py
+ * @example{lineno} examples/linux/multiceiver_demo.py
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * This is a simple example of using the RF24 class on a Raspberry Pi for
@@ -2316,7 +2268,7 @@ private:
  * technique is called "multiceiver" in the datasheet.
  *
  * Remember to install the [Python wrapper](python_wrapper.md), then
- * navigate to the "RF24/examples_linux" folder.
+ * navigate to the "RF24/examples/linux" folder.
  * <br>To run this example, enter
  * @code{.sh}python3 multiceiver_demo.py @endcode and follow the prompts.
  *
@@ -2325,7 +2277,7 @@ private:
  */
 
 /**
- * @example{lineno} examples_linux/scanner.cpp
+ * @example{lineno} examples/linux/scanner.cpp
  *
  * Example to detect interference on the various channels available.
  * This is a good diagnostic tool to check whether you're picking a
@@ -2338,7 +2290,7 @@ private:
  */
 
 /**
- * @example{lineno} examples/scanner/scanner.ino
+ * @example{lineno} examples/arduino/scanner/scanner.ino
  *
  * Example to detect interference on the various channels available.
  * This is a good diagnostic tool to check whether you're picking a
@@ -2349,7 +2301,7 @@ private:
  */
 
 /**
- * @example{lineno} examples_linux/gettingstarted.cpp
+ * @example{lineno} examples/linux/gettingstarted.cpp
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * A simple example of sending data from 1 nRF24L01 transceiver to another.
@@ -2361,7 +2313,7 @@ private:
  */
 
 /**
- * @example{lineno} examples_linux/acknowledgementPayloads.cpp
+ * @example{lineno} examples/linux/acknowledgementPayloads.cpp
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * A simple example of sending data from 1 nRF24L01 transceiver to another
@@ -2372,7 +2324,7 @@ private:
  */
 
 /**
- * @example{lineno} examples_linux/manualAcknowledgements.cpp
+ * @example{lineno} examples/linux/manualAcknowledgements.cpp
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * A simple example of sending data from 1 nRF24L01 transceiver to another
@@ -2388,7 +2340,7 @@ private:
  */
 
 /**
- * @example{lineno} examples_linux/streamingData.cpp
+ * @example{lineno} examples/linux/streamingData.cpp
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * A simple example of sending data from 1 nRF24L01 transceiver to another.
@@ -2398,7 +2350,7 @@ private:
  */
 
 /**
- * @example{lineno} examples_linux/multiceiverDemo.cpp
+ * @example{lineno} examples/linux/multiceiverDemo.cpp
  * Written by [2bndy5](http://github.com/2bndy5) in 2020
  *
  * A simple example of sending data from as many as 6 nRF24L01 transceivers to

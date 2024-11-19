@@ -53,7 +53,7 @@ There is a newer automatic install script that makes use of the CMake approach.
    package, please check out [the pyRF24 documentation](https://nrf24.github.io/pyRF24/).
 4. Try an example from one of the libraries
    ```shell
-   cd ~/rf24libs/RF24/examples_linux
+   cd ~/rf24libs/RF24/examples/linux
    ```
 
    Edit the gettingstarted example, to set your pin configuration
@@ -61,11 +61,10 @@ There is a newer automatic install script that makes use of the CMake approach.
    nano gettingstarted.cpp
    ```
 
-   Build the examples. Remember to set the `RF24_DRIVER` option according to the one that was
-   selected during the scripted install.
+   Build the examples.
    ```shell
    mkdir build && cd build
-   cmake .. -D RF24_DRIVER=SPIDEV
+   cmake ..
    make
    ```
 
@@ -76,7 +75,7 @@ There is a newer automatic install script that makes use of the CMake approach.
 
 ### Building from source code
 
-1. Install prerequisites if there are any (PiGPIO, WiringPi, MRAA, LittleWire libraries, and enable the SPI bus(es) in the OS).
+1. Install prerequisites if there are any and enable the SPI bus(es) in the OS.
 
    CMake may need to be installed
    ```shell
@@ -100,29 +99,13 @@ There is a newer automatic install script that makes use of the CMake approach.
    ```
 5. Configure build environment
 
-   @note When using these instructions to install RF24Mesh, RF24Network, or RF24Gateway,
-   the following `RF24_DRIVER` option is only needed for the RF24 library and
-   examples as well as the examples for RF24Network, RF24Mesh, and RF24Gateway. The `RF24_DRIVER`
-   option is not needed when installing the libraries for RF24Network, RF24Mesh, and RF24Gateway.
-
-   Instead of specifying the `RF24_DRIVER` option in the CLI, it is recommended to use a environment
-   variable named `RF24_DRIVER`.
-
    ```shell
-   export RF24_DRIVER=SPIDEV
+   cmake ..
    ```
-
-   These instructions assume you have not set an environment variable.
-
-   ```shell
-   cmake .. -D RF24_DRIVER=SPIDEV
-   ```
-   Instead of using `SPIDEV` driver (recommended), you can also specify the `RPi`, `wiringPi`,
-   `MRAA`, or `LittleWire` as alternative drivers.
 
    @warning
    `SPIDEV` is now always selected as the default driver because
-   all other Linux drivers are being removed in the future.
+   all other Linux drivers have been removed (as of v2.0).
    See [RF24 issue #971](https://github.com/nRF24/RF24/issues/971) for rationale.
 6. Build and install the library
    ```shell
@@ -131,16 +114,16 @@ There is a newer automatic install script that makes use of the CMake approach.
    ```
 7. Build the examples
 
-   Navigate to the _examples_linux_ directory
+   Navigate to the _examples/linux_ directory
    ```shell
-   cd ../examples_linux
+   cd ../examples/linux
    ```
    Make sure the pins used in the examples match the pins you used to connect the radio module
    ```shell
    nano gettingstarted.cpp
    ```
    and edit the pin numbers as directed in the [linux/RPi general documentation](rpi_general.md).
-   Create a build directory in the examples_linux directory and navigate to it.
+   Create a build directory in the examples/linux directory and navigate to it.
    ```shell
    mkdir build
    cd build
@@ -150,16 +133,6 @@ There is a newer automatic install script that makes use of the CMake approach.
    cmake ..
    make
    ```
-   If using the `MRAA` or `wiringPi` drivers, then you may need to specify the `RF24_DRIVER`
-   option again.
-   ```shell
-   cmake .. -D RF24_DRIVER=wiringPi
-   make
-   ```
-
-   Remember that the `RF24_DRIVER` option is needed for the RF24Network, RF24Mesh, and RF24Gateway
-   examples if you specified that option (via CLI or environment variable) when installing the
-   RF24 library and examples.
 8. Run an example file
    ```shell
    sudo ./gettingstarted
@@ -228,10 +201,6 @@ cmake .. -D CMAKE_INSTALL_PREFIX=/usr/arm-linux-gnueabihf -D CMAKE_TOOLCHAIN_FIL
 make
 sudo make install
 ```
-
-Remember to also specify the `RF24_DRIVER` option (via CLI or environment variable) if
-not using the auto-configuration feature (see step 5 in the above instructions to build
-from source).
 
 ### Installing the library remotely
 
